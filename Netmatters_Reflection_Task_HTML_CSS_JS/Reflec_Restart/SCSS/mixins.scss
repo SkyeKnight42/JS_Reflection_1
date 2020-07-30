@@ -1,0 +1,67 @@
+@import "variables.scss";
+
+@each $name, $col, $dark_col in $colours {
+    .#{$name}_hover {
+            a .fa {
+                color: $col;
+        }
+    }
+    .#{$name}_hover:hover {
+        background-color: $col;
+        margin-left: auto;
+        margin-right: auto;
+        .#{$name}_contents {
+            display: flex;
+            // display: block;
+            .content_position {
+                display: flex;
+                background-color: $dark_col;
+                a {
+                    background-color: $dark_col;
+                }
+            }
+            background-color: $dark_col;
+            // a {
+            //     background-color: $dark_col;
+            // }
+        }
+        a .fa {
+            color: white;
+        }
+    }
+}
+
+@each $name, $col, $dark_col in $colours {
+    .card_#{$name} {
+        color: black;
+        .#{$name}_icon_background {
+            background-color: $col;
+        }
+        .btn_#{$name} {
+            background-color: $dark_col;
+            color: white;
+        }
+    }
+    .card_#{$name}:hover {
+        background-color: $col;
+        color: white;
+        .#{$name} {
+            &_icon_background {
+                background-color: white;
+            }
+        }
+        .btn_#{$name},
+        .fa {
+            color: $col;
+        }
+        .btn {
+            background-color: white;
+        }
+    }
+    .slide_button_#{$name} {
+        background-color: $col;
+    }
+    .slide_button_#{$name}:hover {
+        background-color: $dark_col;
+    }
+}

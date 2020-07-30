@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "input.css",
+	"sources": [
+		"../scss/input.scss"
+	],
+	"sourcesContent": [
+		"* {\r\n    box-sizing: border-box;\r\n}\r\n\r\n.header_container {\r\n    display: grid;\r\n    background-color: whitesmoke;\r\n    height: auto;\r\n    // padding: 1em;\r\n    width: 100vw;\r\n    grid-template-columns: 1fr repeat(3, minmax(100px, 300px));\r\n    grid-gap: 2em;\r\n    margin: 1em 20%;\r\n}\r\n\r\n.logo_header {\r\n    grid-column-start: 0;\r\n    grid-column-end: 1;\r\n    width: 400px;\r\n}\r\n\r\nheader > button {\r\n    color: green;\r\n}\r\n\r\n.button_support {\r\n    grid-column-start: 1;\r\n    grid-column-end: 2;\r\n}\r\n.button_support {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n}\r\n\r\n.search_bar {\r\n    grid-column-start: 3;\r\n    grid-column-end: 4;\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU;CACzB;;;AAED,AAAA,iBAAiB,CAAC;EACd,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,UAAU;EAC5B,MAAM,EAAE,IAAI;EAEZ,KAAK,EAAE,KAAK;EACZ,qBAAqB,EAAE,GAAG,CAAC,+BAA+B;EAC1D,QAAQ,EAAE,GAAG;EACb,MAAM,EAAE,OAAO;CAClB;;;AAED,AAAA,YAAY,CAAC;EACT,iBAAiB,EAAE,CAAC;EACpB,eAAe,EAAE,CAAC;EAClB,KAAK,EAAE,KAAK;CACf;;;AAED,AAAA,MAAM,GAAG,MAAM,CAAC;EACZ,KAAK,EAAE,KAAK;CACf;;;AAED,AAAA,eAAe,CAAC;EACZ,iBAAiB,EAAE,CAAC;EACpB,eAAe,EAAE,CAAC;CACrB;;;AACD,AAAA,eAAe,CAAC;EACZ,iBAAiB,EAAE,CAAC;EACpB,eAAe,EAAE,CAAC;CACrB;;;AAED,AAAA,WAAW,CAAC;EACR,iBAAiB,EAAE,CAAC;EACpB,eAAe,EAAE,CAAC;CACrB"
+}

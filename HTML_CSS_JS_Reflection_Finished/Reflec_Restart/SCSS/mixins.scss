@@ -12,7 +12,6 @@
         margin-right: auto;
         .#{$name}_contents {
             display: flex;
-            // display: block;
             .content_position {
                 display: flex;
                 background-color: $dark_col;
@@ -21,9 +20,6 @@
                 }
             }
             background-color: $dark_col;
-            // a {
-            //     background-color: $dark_col;
-            // }
         }
         a .fa {
             color: white;
@@ -33,22 +29,19 @@
 
 @each $name, $col, $dark_col in $colours {
     .card_#{$name} {
-        color: black;
         .#{$name}_icon_background {
             background-color: $col;
         }
         .btn_#{$name} {
-            background-color: $dark_col;
+            background-color: $col;
             color: white;
         }
     }
     .card_#{$name}:hover {
         background-color: $col;
         color: white;
-        .#{$name} {
-            &_icon_background {
-                background-color: white;
-            }
+        .#{$name}_icon_background {
+            background-color: white;
         }
         .btn_#{$name},
         .fa {
@@ -58,10 +51,41 @@
             background-color: white;
         }
     }
+}
+
+@each $name, $normal_col, $hover_col in $colours {
+    .news_info_#{$name} {
+        .card_image_container {
+            .tab_boundaries {
+                .tab_link {
+                    background-color: $normal_col;
+                }
+            }
+        }
+        .news_title {
+            color: $normal_col;
+            text-decoration: none;
+        }
+        .news_title:hover {
+            color: $normal_col;
+        }
+        .read_more_button {
+            background-color: $normal_col;
+        }
+        .read_more_button:hover {
+            background-color: $hover_col;
+        }
+    }
+
     .slide_button_#{$name} {
-        background-color: $col;
+        background-color: $normal_col;
     }
     .slide_button_#{$name}:hover {
-        background-color: $dark_col;
+        background-color: $hover_col;
+    }
+
+    .header_button .#{$name}_icon {
+        color: $normal_col;
+        // background-color: $normal_col;
     }
 }

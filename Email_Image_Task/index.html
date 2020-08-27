@@ -15,13 +15,19 @@
         </header>
             <div class="content_container">
                 <h2>Image Preview:</h2>
+                <p class="API_error" id="API_error">API Error</p>
                 <div class="image_preview" id="image_preview">
                     <img class="preview_image" id="preview_image"> 
                 </div>
                 <div class="input_container">
                     <h2>Input:</h2>
-                    <input type="text" id="email_input" placeholder="Email" >
+                    <div class="email_error">
+                        <p id="email_error">*Invalid Email!</p>
+                    </div>
+                    <label for="Email">Email Address:</label><br>
+                    <input type="text" id="email_input" name="Email">
                     <a class="add_button" id="add_button" >Add Item</a>
+                    <a class="new_button" id="new_button">New Image</a>
                 </div>
                 <div class="image_container" id="image_container">
                 </div>
@@ -29,8 +35,8 @@
         <footer>
 
         </footer>
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>     -->
         <script src="image_loader.js"></script>
     </body>
 </html>

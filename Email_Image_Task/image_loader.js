@@ -5,7 +5,13 @@ const PrivateKey = 'cY0OyVXeasSHJPZ_Dpv1kO70VdzEEHqIaFX5QmYXrjU'
 const imageContainer = document.getElementById('image_container')
 
 const addItemButton = document.getElementById('add_button')
+const newImageButton = document.getElementById('new_button')
 const inputField = document.getElementById('email_input')
+const emailError = document.getElementById('email_error')
+const APIError = document.getElementById('API_error')
+
+emailError.style.color = 'white'
+APIError.style.color = 'white'
 
 let testedEmail
 let imageURL
@@ -17,11 +23,16 @@ addItemButton.addEventListener('click', () => {
     previewImage()
 })
 
+newImageButton.addEventListener('click', () => {
+    previewImage();
+})
+
 function validateEmail(emailInput) {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (emailInput.match(mailformat)) { //Validate Email
-        console.log("Valid Email")
-        
+        // console.log("Valid Email")
+        emailError.style.color = 'white'
+
         // If email is valid, store the variable for once an image has successfully been retrieved from the API
         testedEmail = document.getElementById(emailInput) 
 
@@ -33,7 +44,8 @@ function validateEmail(emailInput) {
         }
 
     } else {
-        console.log("Invalid Email")
+        // console.log("Invalid Email")
+        emailError.style.color = 'red'
     }
 }
 
@@ -62,16 +74,21 @@ function previewImage() {
     const url = "https://api.unsplash.com/photos/random/?client_id="+AccessKey
     fetch(url)
         .then(function (data) {
+            APIError.style.color='white'
             return data.json()
         })
         .then(function(data) {
-            console.log(data)
             imageURL = data.urls.regular
-            // document.getElementById("preview_image").src=data.urls.regular
             document.getElementById('preview_image').src = imageURL
-
+            APIError.style.color='white' 
+        })
+        .catch(() => {
+            console.log("Fail")
+            APIError.style.color = 'red'
         })
 }
+
+
 
 // function searchPhotos(_email) {
 //     const url = "https://api.unsplash.com/photos/random/?client_id="+AccessKey

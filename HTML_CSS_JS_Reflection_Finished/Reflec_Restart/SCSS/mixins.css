@@ -1,0 +1,552 @@
+.web_hover a .fa {
+  color: #926fb1;
+}
+
+.web_hover:hover {
+  background-color: #926fb1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.web_hover:hover .web_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #79539a;
+}
+
+.web_hover:hover .web_contents .content_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #79539a;
+}
+
+.web_hover:hover .web_contents .content_position a {
+  background-color: #79539a;
+}
+
+.web_hover:hover a .fa {
+  color: white;
+}
+
+.it_hover a .fa {
+  color: #4183d7;
+}
+
+.it_hover:hover {
+  background-color: #4183d7;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.it_hover:hover .it_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #286abd;
+}
+
+.it_hover:hover .it_contents .content_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #286abd;
+}
+
+.it_hover:hover .it_contents .content_position a {
+  background-color: #286abd;
+}
+
+.it_hover:hover a .fa {
+  color: white;
+}
+
+.telecoms_hover a .fa {
+  color: #d64541;
+}
+
+.telecoms_hover:hover {
+  background-color: #d64541;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.telecoms_hover:hover .telecoms_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #bc2c28;
+}
+
+.telecoms_hover:hover .telecoms_contents .content_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #bc2c28;
+}
+
+.telecoms_hover:hover .telecoms_contents .content_position a {
+  background-color: #bc2c28;
+}
+
+.telecoms_hover:hover a .fa {
+  color: white;
+}
+
+.bespoke_hover a .fa {
+  color: #67809f;
+}
+
+.bespoke_hover:hover {
+  background-color: #67809f;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bespoke_hover:hover .bespoke_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #526781;
+}
+
+.bespoke_hover:hover .bespoke_contents .content_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #526781;
+}
+
+.bespoke_hover:hover .bespoke_contents .content_position a {
+  background-color: #526781;
+}
+
+.bespoke_hover:hover a .fa {
+  color: white;
+}
+
+.digital_hover a .fa {
+  color: #2eec71;
+}
+
+.digital_hover:hover {
+  background-color: #2eec71;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.digital_hover:hover .digital_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #25a25a;
+}
+
+.digital_hover:hover .digital_contents .content_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #25a25a;
+}
+
+.digital_hover:hover .digital_contents .content_position a {
+  background-color: #25a25a;
+}
+
+.digital_hover:hover a .fa {
+  color: white;
+}
+
+.cybers_hover a .fa {
+  color: #f62459;
+}
+
+.cybers_hover:hover {
+  background-color: #f62459;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cybers_hover:hover .cybers_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #de093f;
+}
+
+.cybers_hover:hover .cybers_contents .content_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #de093f;
+}
+
+.cybers_hover:hover .cybers_contents .content_position a {
+  background-color: #de093f;
+}
+
+.cybers_hover:hover a .fa {
+  color: white;
+}
+
+.card_web .web_icon_background {
+  background-color: #926fb1;
+}
+
+.card_web .btn_web {
+  background-color: #926fb1;
+  color: white;
+}
+
+.card_web:hover {
+  background-color: #926fb1;
+  color: white;
+}
+
+.card_web:hover .web_icon_background {
+  background-color: white;
+}
+
+.card_web:hover .btn_web,
+.card_web:hover .fa {
+  color: #926fb1;
+}
+
+.card_web:hover .btn {
+  background-color: white;
+}
+
+.card_it .it_icon_background {
+  background-color: #4183d7;
+}
+
+.card_it .btn_it {
+  background-color: #4183d7;
+  color: white;
+}
+
+.card_it:hover {
+  background-color: #4183d7;
+  color: white;
+}
+
+.card_it:hover .it_icon_background {
+  background-color: white;
+}
+
+.card_it:hover .btn_it,
+.card_it:hover .fa {
+  color: #4183d7;
+}
+
+.card_it:hover .btn {
+  background-color: white;
+}
+
+.card_telecoms .telecoms_icon_background {
+  background-color: #d64541;
+}
+
+.card_telecoms .btn_telecoms {
+  background-color: #d64541;
+  color: white;
+}
+
+.card_telecoms:hover {
+  background-color: #d64541;
+  color: white;
+}
+
+.card_telecoms:hover .telecoms_icon_background {
+  background-color: white;
+}
+
+.card_telecoms:hover .btn_telecoms,
+.card_telecoms:hover .fa {
+  color: #d64541;
+}
+
+.card_telecoms:hover .btn {
+  background-color: white;
+}
+
+.card_bespoke .bespoke_icon_background {
+  background-color: #67809f;
+}
+
+.card_bespoke .btn_bespoke {
+  background-color: #67809f;
+  color: white;
+}
+
+.card_bespoke:hover {
+  background-color: #67809f;
+  color: white;
+}
+
+.card_bespoke:hover .bespoke_icon_background {
+  background-color: white;
+}
+
+.card_bespoke:hover .btn_bespoke,
+.card_bespoke:hover .fa {
+  color: #67809f;
+}
+
+.card_bespoke:hover .btn {
+  background-color: white;
+}
+
+.card_digital .digital_icon_background {
+  background-color: #2eec71;
+}
+
+.card_digital .btn_digital {
+  background-color: #2eec71;
+  color: white;
+}
+
+.card_digital:hover {
+  background-color: #2eec71;
+  color: white;
+}
+
+.card_digital:hover .digital_icon_background {
+  background-color: white;
+}
+
+.card_digital:hover .btn_digital,
+.card_digital:hover .fa {
+  color: #2eec71;
+}
+
+.card_digital:hover .btn {
+  background-color: white;
+}
+
+.card_cybers .cybers_icon_background {
+  background-color: #f62459;
+}
+
+.card_cybers .btn_cybers {
+  background-color: #f62459;
+  color: white;
+}
+
+.card_cybers:hover {
+  background-color: #f62459;
+  color: white;
+}
+
+.card_cybers:hover .cybers_icon_background {
+  background-color: white;
+}
+
+.card_cybers:hover .btn_cybers,
+.card_cybers:hover .fa {
+  color: #f62459;
+}
+
+.card_cybers:hover .btn {
+  background-color: white;
+}
+
+.news_info_web .card_image_container .tab_boundaries .tab_link {
+  background-color: #926fb1;
+}
+
+.news_info_web .news_title {
+  color: #926fb1;
+  text-decoration: none;
+}
+
+.news_info_web .news_title:hover {
+  color: #926fb1;
+}
+
+.news_info_web .read_more_button {
+  background-color: #926fb1;
+}
+
+.news_info_web .read_more_button:hover {
+  background-color: #79539a;
+}
+
+.slide_button_web {
+  background-color: #926fb1;
+}
+
+.slide_button_web:hover {
+  background-color: #79539a;
+}
+
+.header_button .web_icon {
+  color: #926fb1;
+}
+
+.news_info_it .card_image_container .tab_boundaries .tab_link {
+  background-color: #4183d7;
+}
+
+.news_info_it .news_title {
+  color: #4183d7;
+  text-decoration: none;
+}
+
+.news_info_it .news_title:hover {
+  color: #4183d7;
+}
+
+.news_info_it .read_more_button {
+  background-color: #4183d7;
+}
+
+.news_info_it .read_more_button:hover {
+  background-color: #286abd;
+}
+
+.slide_button_it {
+  background-color: #4183d7;
+}
+
+.slide_button_it:hover {
+  background-color: #286abd;
+}
+
+.header_button .it_icon {
+  color: #4183d7;
+}
+
+.news_info_telecoms .card_image_container .tab_boundaries .tab_link {
+  background-color: #d64541;
+}
+
+.news_info_telecoms .news_title {
+  color: #d64541;
+  text-decoration: none;
+}
+
+.news_info_telecoms .news_title:hover {
+  color: #d64541;
+}
+
+.news_info_telecoms .read_more_button {
+  background-color: #d64541;
+}
+
+.news_info_telecoms .read_more_button:hover {
+  background-color: #bc2c28;
+}
+
+.slide_button_telecoms {
+  background-color: #d64541;
+}
+
+.slide_button_telecoms:hover {
+  background-color: #bc2c28;
+}
+
+.header_button .telecoms_icon {
+  color: #d64541;
+}
+
+.news_info_bespoke .card_image_container .tab_boundaries .tab_link {
+  background-color: #67809f;
+}
+
+.news_info_bespoke .news_title {
+  color: #67809f;
+  text-decoration: none;
+}
+
+.news_info_bespoke .news_title:hover {
+  color: #67809f;
+}
+
+.news_info_bespoke .read_more_button {
+  background-color: #67809f;
+}
+
+.news_info_bespoke .read_more_button:hover {
+  background-color: #526781;
+}
+
+.slide_button_bespoke {
+  background-color: #67809f;
+}
+
+.slide_button_bespoke:hover {
+  background-color: #526781;
+}
+
+.header_button .bespoke_icon {
+  color: #67809f;
+}
+
+.news_info_digital .card_image_container .tab_boundaries .tab_link {
+  background-color: #2eec71;
+}
+
+.news_info_digital .news_title {
+  color: #2eec71;
+  text-decoration: none;
+}
+
+.news_info_digital .news_title:hover {
+  color: #2eec71;
+}
+
+.news_info_digital .read_more_button {
+  background-color: #2eec71;
+}
+
+.news_info_digital .read_more_button:hover {
+  background-color: #25a25a;
+}
+
+.slide_button_digital {
+  background-color: #2eec71;
+}
+
+.slide_button_digital:hover {
+  background-color: #25a25a;
+}
+
+.header_button .digital_icon {
+  color: #2eec71;
+}
+
+.news_info_cybers .card_image_container .tab_boundaries .tab_link {
+  background-color: #f62459;
+}
+
+.news_info_cybers .news_title {
+  color: #f62459;
+  text-decoration: none;
+}
+
+.news_info_cybers .news_title:hover {
+  color: #f62459;
+}
+
+.news_info_cybers .read_more_button {
+  background-color: #f62459;
+}
+
+.news_info_cybers .read_more_button:hover {
+  background-color: #de093f;
+}
+
+.slide_button_cybers {
+  background-color: #f62459;
+}
+
+.slide_button_cybers:hover {
+  background-color: #de093f;
+}
+
+.header_button .cybers_icon {
+  color: #f62459;
+}
+/*# sourceMappingURL=mixins.css.map */

@@ -7,7 +7,9 @@
 
 $('.image_slideshow').slick({
   autoplay: true,
-  autplaySpeed: 4000,
-  dots: true
+  autplaySpeed: 1000,
+  dots: true,
+  prevArrow: false,
+  nextArrow: false
 })
 

@@ -7,12 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
-.nav-up {
-    margin-top: -210px;
-}
 header {
     height: 168px;
     padding: 20px 0;
+    position: fixed;
     .width_container {
         height: 128px;
         justify-content: center;

@@ -793,7 +793,6 @@
 header {
   height: 168px;
   padding: 20px 0;
-  position: fixed;
 }
 
 header .width_container {
@@ -2080,6 +2079,10 @@ header #overlay {
     height: 210px;
     padding-top: 20px;
     padding-bottom: 0px;
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 100%;
   }
   header .width_container {
     width: 970px;
@@ -2235,6 +2238,9 @@ header #overlay {
 }
 
 @media (min-width: 1260px) {
+  header {
+    background-color: green;
+  }
   header .width_container {
     width: 1200px;
   }

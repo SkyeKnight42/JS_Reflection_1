@@ -6,6 +6,8 @@
  * @param  {Integer}  refresh  How long to wait between scroll events [optional]
  */
 
+const headerElement = document.getElementById("headerElement");
+
 var scrollDistance = function (callback, refresh) {
 
 	// Make sure a valid callback was provided
@@ -40,16 +42,27 @@ var scrollDistance = function (callback, refresh) {
 			end = null;
 			distance = null;
 
-		}, refresh || 25);
+		}, refresh || 10);
 
 	}, false);
 };
 
-scrollDistance(function (distance) {
-    console.log('You travelled ' + parseInt(Math.abs(distance), 10) + 'px ' + (distance < 0 ? 'up' : 'down'));
-    if (parseInt(Math.abs(distance), 10) > distance) {
-        console.log("up")
-    } else {
-        console.log("down")
-    }
-});
+
+
+let header_Height = 168
+
+if (document.body.clientWidth < 750) {
+	header_Height = 168
+} else if (document.body.clientWidth < 975) {
+	header_Height = 110
+} else {
+	header_Height = 210
+}
+setInterval(() => {
+	if (window.scrollY > header_Height) {
+		headerElement.classList.add("sticky_header")
+		console.log(window.scrollY)
+	} else {
+		headerElement.classList.remove("sticky_header")
+	}
+}, 100)

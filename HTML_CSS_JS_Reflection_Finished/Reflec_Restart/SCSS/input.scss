@@ -7,14 +7,20 @@
     font-family: "Poppins", sans-serif;
 }
 
+.sticky_header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 500;
+}
+
 header {
     height: 168px;
     padding: 20px 0;
-    position: fixed;
-    z-index: 500;
-    background-color: white;
-    width: 100%;
-    // background-color: green;
+    // position: fixed;
+    // z-index: 500;
+    // background-color: white;
+    // width: 100%;
     .width_container {
         height: 128px;
         justify-content: center;
@@ -405,6 +411,7 @@ header {
 }
 
 .image_slideshow {
+    // padding-top: 210px;
     justify-content: center;
     position: relative;
     border-top: solid 1px grey;

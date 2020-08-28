@@ -4,18 +4,19 @@
            "format": "expanded",
            "extensionName": ".css",
            "savePath": "/CSS"
-       },
-       {
-           "extensionName": ".min.css",
-           "format": "compressed",
-           "savePath": "/CSS"
        }
    ],
    "liveSassCompile.settings.excludeList": [
       "**/node_modules/**",
       ".vscode/**"
    ],
-   "liveSassCompile.settings.generateMap": true,
+   "liveSassCompile.settings.includeItems": [
+       {
+           "input": "~/SCSS",
+           "output": "~/CSS"
+       }
+   ],
+//    "liveSassCompile.settings.generateMap": true,
    "liveSassCompile.settings.autoprefix": [
        "> 1%",
        "last 2 versions"

@@ -790,13 +790,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+.sticky_header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 500;
+}
+
 header {
   height: 168px;
   padding: 20px 0;
-  position: fixed;
-  z-index: 500;
-  background-color: white;
-  width: 100%;
 }
 
 header .width_container {
@@ -1942,10 +1945,6 @@ header #overlay {
 @media (min-width: 750px) {
   header {
     height: 110px;
-    position: fixed;
-    z-index: 500;
-    background-color: white;
-    width: 100%;
   }
   header .width_container {
     height: 70px;
@@ -2087,10 +2086,6 @@ header #overlay {
     height: 210px;
     padding-top: 20px;
     padding-bottom: 0px;
-    position: fixed;
-    z-index: 500;
-    background-color: white;
-    width: 100%;
   }
   header .width_container {
     width: 970px;
@@ -2246,12 +2241,6 @@ header #overlay {
 }
 
 @media (min-width: 1260px) {
-  header {
-    position: fixed;
-    z-index: 500;
-    background-color: white;
-    width: 100%;
-  }
   header .width_container {
     width: 1200px;
   }

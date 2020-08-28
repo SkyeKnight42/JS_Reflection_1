@@ -1942,6 +1942,10 @@ header #overlay {
 @media (min-width: 750px) {
   header {
     height: 110px;
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 100%;
   }
   header .width_container {
     height: 70px;
@@ -2083,6 +2087,10 @@ header #overlay {
     height: 210px;
     padding-top: 20px;
     padding-bottom: 0px;
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 100%;
   }
   header .width_container {
     width: 970px;
@@ -2157,6 +2165,19 @@ header #overlay {
   header .pushy .menu_lists_container {
     margin-top: 0px;
   }
+  .image_slideshow
+.image_text_boundaries {
+    width: 950px;
+  }
+  .image_slideshow
+.image_text_boundaries .image_text {
+    display: inline-block;
+    text-align: left;
+  }
+  .image_slideshow
+.image_text_boundaries .image_text a {
+    margin: 0;
+  }
   .card_container .card_width_container {
     width: 970px;
   }
@@ -2222,24 +2243,14 @@ header #overlay {
   .sponsor .sponsor_container {
     width: 950px;
   }
-  .image_slideshow
-.image_text_boundaries {
-    width: 950px;
-  }
-  .image_slideshow
-.image_text_boundaries .image_text {
-    display: inline-block;
-    text-align: left;
-  }
-  .image_slideshow
-.image_text_boundaries .image_text a {
-    margin: 0;
-  }
 }
 
 @media (min-width: 1260px) {
   header {
-    background-color: green;
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 100%;
   }
   header .width_container {
     width: 1200px;

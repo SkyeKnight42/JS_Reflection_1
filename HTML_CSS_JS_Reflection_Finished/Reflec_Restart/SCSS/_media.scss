@@ -2,6 +2,10 @@
 @media (min-width: 750px) {  
     header {
         height: 110px;
+        position: fixed;
+        z-index: 500;
+        background-color: white;
+        width: 100%;
         .width_container {
             height: 70px;
             width: 750px;
@@ -64,6 +68,7 @@
             }
         }
     }
+
     .image_slideshow 
     .image_text_boundaries {
         width: 750px;
@@ -73,6 +78,7 @@
             display: inline-block;
         }
     }
+
     .card_container {
         .card_width_container {
             width: 750px;
@@ -92,6 +98,7 @@
             }
         }
     }
+
     .description_block {
         .description_background {
         .description_width {
@@ -101,9 +108,11 @@
             }
         }
     }
+
     .latest .latest_boundaries {
         width: 750px;
     }
+
     .latest_width {
         .latest_column {
             width: 750px;
@@ -121,12 +130,14 @@
             }
         }
     }
+
     .logo_container {
         display: flex;
         .logo_segment {
             width: 750px;
         }
     }
+
     .about_links {
         .about_links_container {
             width: 750px;
@@ -135,6 +146,7 @@
             }
         }
     }
+
     .sponsor {
         display: block;
     }
@@ -146,6 +158,10 @@
         height: 210px;
         padding-top: 20px;
         padding-bottom: 0px;
+        position: fixed;
+        z-index: 500;
+        background-color: white;
+        width: 100%;
         .width_container {
             width: 970px;
             margin-left: auto;
@@ -218,6 +234,19 @@
             }
         }
     }
+
+    .image_slideshow 
+    .image_text_boundaries {
+        width: 950px;
+        .image_text {
+            display: inline-block;
+            text-align: left;
+            a {
+                margin: 0;
+            }
+        }
+    }
+
     .card_container {
         .card_width_container {
             width: 970px;
@@ -247,6 +276,7 @@
             }
         }
     }
+
     .description_block {
         .description_background {
         .description_width {
@@ -254,9 +284,11 @@
             }
         }
     }
+
     .latest .latest_boundaries {
         width: 970px;
     }
+
     .latest_width {
         .latest_column {
             width: 970px;
@@ -265,6 +297,7 @@
             }
         }
     }
+
     .logo_container {
         .logo_segment {
             width: 970px;
@@ -282,6 +315,7 @@
             }
         }
     }
+
     .about_links {
         .about_links_container {
             width: 970px;
@@ -290,21 +324,11 @@
             }
         }
     }
+
     .sponsor {
         height: 210px;
         .sponsor_container {
             width: 950px;
-        }
-    }
-    .image_slideshow 
-    .image_text_boundaries {
-        width: 950px;
-        .image_text {
-            display: inline-block;
-            text-align: left;
-            a {
-                margin: 0;
-            }
         }
     }
 }
@@ -312,7 +336,11 @@
 // Happens when the viewport is 1260 pixels or wider
 @media (min-width: 1260px) {
     header {
-        background-color: green;
+        // background-color: green;
+        position: fixed;
+        z-index: 500;
+        background-color: white;
+        width: 100%;
         .width_container {
             width: 1200px;
             .header_box {
@@ -425,6 +453,7 @@
             background-color: rgba(0,0,0,.5);
         }
     }
+    
     .image_slideshow {
         .image_text_boundaries {
             width: 1200px;
@@ -433,6 +462,7 @@
             }
         }
     }
+
     .card_container {
         .card_width_container {
             width: 1200px;
@@ -456,6 +486,7 @@
             }
         }
     }
+
     .description_block {
         .description_background {
         .description_width {
@@ -466,9 +497,11 @@
             }
         }
     }
+
     .latest .latest_boundaries {
         width: 1200px;
     }
+
     .latest_width {
         .latest_column {
             width: 1200px;
@@ -481,6 +514,7 @@
             }
         }
     }
+
     .logo_container {
         .logo_segment {
             width: 1200px;
@@ -498,6 +532,7 @@
             }
         }
     }
+
     .about_links {
         .about_links_container {
             width: 1200px;
@@ -506,6 +541,7 @@
             }
         }
     }
+
     .sponsor {
         height: 188px;
         .sponsor_container {

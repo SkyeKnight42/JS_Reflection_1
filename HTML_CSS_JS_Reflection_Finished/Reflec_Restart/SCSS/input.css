@@ -792,14 +792,16 @@
 
 .sticky_header {
   position: fixed;
-  background-color: white;
   width: 100%;
   z-index: 500;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 header {
   height: 168px;
   padding: 20px 0;
+  background-color: white;
 }
 
 header .width_container {

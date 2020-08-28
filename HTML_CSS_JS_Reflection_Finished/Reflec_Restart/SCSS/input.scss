@@ -9,9 +9,9 @@
 
 .sticky_header {
     position: fixed;
-    background-color: white;
     width: 100%;
     z-index: 500;
+    transition: all .5s ease-in-out;
 }
 
 header {
@@ -19,7 +19,7 @@ header {
     padding: 20px 0;
     // position: fixed;
     // z-index: 500;
-    // background-color: white;
+    background-color: white;
     // width: 100%;
     .width_container {
         height: 128px;

@@ -58,11 +58,19 @@ if (document.body.clientWidth < 750) {
 } else {
 	header_Height = 210
 }
-setInterval(() => {
-	if (window.scrollY > header_Height) {
-		headerElement.classList.add("sticky_header")
-		console.log(window.scrollY)
-	} else {
-		headerElement.classList.remove("sticky_header")
+
+let scrollHeight = 0
+window.addEventListener("scroll", () => {
+	if (window.scrollY >header_Height) {
+		if (window.scrollY < scrollHeight) {
+			console.log("Scrolling Up")
+			headerElement.classList.add("sticky_header")
+
+		} else {
+			console.log("Scrolling Down")
+			headerElement.classList.remove("sticky_header")
+
+		}
+		scrollHeight = window.scrollY
 	}
-}, 100)
+})

@@ -157,8 +157,8 @@
 }
 
 .pushy-submenu > ul {
-  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .pushy-submenu > ul .pushy-link {

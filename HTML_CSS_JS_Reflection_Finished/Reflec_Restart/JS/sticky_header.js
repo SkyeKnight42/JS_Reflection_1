@@ -8,46 +8,46 @@
 
 const headerElement = document.getElementById("headerElement");
 
-var scrollDistance = function (callback, refresh) {
+//#region 
+// var scrollDistance = function (callback, refresh) {
 
-	// Make sure a valid callback was provided
-	if (!callback || typeof callback !== 'function') return;
+// 	// Make sure a valid callback was provided
+// 	if (!callback || typeof callback !== 'function') return;
 
-	// Variables
-	var isScrolling, start, end, distance;
+// 	// Variables
+// 	var isScrolling, start, end, distance;
 
-	// Listen for scroll events
-	window.addEventListener('scroll', function (event) {
+// 	// Listen for scroll events
+// 	window.addEventListener('scroll', function (event) {
 
-		// Set starting position
-		if (!start) {
-			start = window.pageYOffset;
-		}
+// 		// Set starting position
+// 		if (!start) {
+// 			start = window.pageYOffset;
+// 		}
 
-		// Clear our timeout throughout the scroll
-		window.clearTimeout(isScrolling);
+// 		// Clear our timeout throughout the scroll
+// 		window.clearTimeout(isScrolling);
 
-		// Set a timeout to run after scrolling ends
-		isScrolling = setTimeout(function() {
+// 		// Set a timeout to run after scrolling ends
+// 		isScrolling = setTimeout(function() {
 
-			// Calculate distance
-			end = window.pageYOffset;
-			distance = end - start;
+// 			// Calculate distance
+// 			end = window.pageYOffset;
+// 			distance = end - start;
 
-			// Run the callback
-			callback(distance, start, end);
+// 			// Run the callback
+// 			callback(distance, start, end);
 
-			// Reset calculations
-			start = null;
-			end = null;
-			distance = null;
+// 			// Reset calculations
+// 			start = null;
+// 			end = null;
+// 			distance = null;
 
-		}, refresh || 10);
+// 		}, refresh || 10);
 
-	}, false);
-};
-
-
+// 	}, false);
+// };
+//#endregion
 
 let header_Height = 168
 
@@ -63,14 +63,15 @@ let scrollHeight = 0
 window.addEventListener("scroll", () => {
 	if (window.scrollY >header_Height) {
 		if (window.scrollY < scrollHeight) {
-			console.log("Scrolling Up")
-			headerElement.classList.add("sticky_header")
-
-		} else {
-			console.log("Scrolling Down")
 			headerElement.classList.remove("sticky_header")
 
+		} else {
+			headerElement.classList.add("sticky_header")
 		}
+		
 		scrollHeight = window.scrollY
+	}
+	if (window.scrollY < header_Height) {
+		headerElement.classList.remove("sticky_header")
 	}
 })

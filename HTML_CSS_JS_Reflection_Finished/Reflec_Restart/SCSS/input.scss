@@ -8,19 +8,27 @@
 }
 
 .sticky_header {
-    position: fixed;
-    width: 100%;
-    z-index: 500;
-    transition: all .5s ease-in-out;
+    // position: fixed;
+    // width: 100%;
+    // z-index: 500;
+    // transition: all 1s ease-in-out;
+    // opacity: 50%;
+    // top: -168px;
+    transform: translateY(-168px)
 }
 
 header {
+    transition: all .5s ease-in-out;
+
+    position: fixed;
+    // top: -168px;
+    // top: 0px;
     height: 168px;
     padding: 20px 0;
-    // position: fixed;
-    // z-index: 500;
+    z-index: 500;
+    width: 100%;
     background-color: white;
-    // width: 100%;
+
     .width_container {
         height: 128px;
         justify-content: center;
@@ -101,12 +109,13 @@ header {
                         &:hover {
                             background-color: #22242e;
                         }
-                        .line {
+                        .burger_line {
                             display: block;
                             height: 3px;
                             width: 30px;
                             background-color: white;
-                            margin-top: 5px;
+                            margin: 5px 0;
+                            // transform: rotateZ(0deg);
                         }
                         p {
                             width: 33px;
@@ -116,6 +125,17 @@ header {
                             text-transform: uppercase;
                             text-align: center;
                             color: white;
+                        }
+
+                        .tilt_left {
+                            transition: all .25s ease-in-out;
+                            // margin: 0;
+                            transform: translateY(8px) rotateZ(-45deg);
+                        }
+                        .tilt_right {
+                            transition: all .25s ease-in-out;
+                            // margin: 0;
+                            transform: translateY(-8px) rotateZ(45deg);
                         }
                     }
                 }
@@ -411,7 +431,7 @@ header {
 }
 
 .image_slideshow {
-    // padding-top: 210px;
+    padding-top: 168px;
     justify-content: center;
     position: relative;
     border-top: solid 1px grey;

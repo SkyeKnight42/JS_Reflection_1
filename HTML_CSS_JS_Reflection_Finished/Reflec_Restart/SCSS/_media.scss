@@ -1,5 +1,10 @@
 // Happens when the viewport is 750 pixels or wider
 @media (min-width: 750px) {  
+
+    .sticky_header {
+        transform: translateY(-110px)
+    }
+
     header {
         height: 110px;
         .width_container {
@@ -65,14 +70,17 @@
         }
     }
 
-    .image_slideshow 
-    .image_text_boundaries {
-        width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-        .image_text {
-            display: inline-block;
+    .image_slideshow {
+        padding-top: 110px;
+        .image_text_boundaries {
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            .image_text {
+                display: inline-block;
+            }
         }
+    
     }
 
     .card_container {
@@ -150,6 +158,11 @@
 
 // Happens when the viewport is 975 pixels or wider
 @media (min-width: 975px) {
+
+    .sticky_header {
+        transform: translateY(-211px)
+    }
+
     header {
         height: 210px;
         padding-top: 20px;
@@ -227,14 +240,16 @@
         }
     }
 
-    .image_slideshow 
-    .image_text_boundaries {
-        width: 950px;
-        .image_text {
-            display: inline-block;
-            text-align: left;
-            a {
-                margin: 0;
+    .image_slideshow {
+        padding-top: 210px;
+        .image_text_boundaries {
+            width: 950px;
+            .image_text {
+                display: inline-block;
+                text-align: left;
+                a {
+                    margin: 0;
+                }
             }
         }
     }

@@ -19,10 +19,7 @@
 
 header {
     transition: all .5s ease-in-out;
-
     position: fixed;
-    // top: -168px;
-    // top: 0px;
     height: 168px;
     padding: 20px 0;
     z-index: 500;
@@ -433,41 +430,51 @@ header {
 .image_slideshow {
     padding-top: 168px;
     justify-content: center;
-    position: relative;
+    // position: relative;
+    // position: absolute;
     border-top: solid 1px grey;
+    overflow: hidden;
 
-    .office {
-        width: 100%;
-        height: 759px;
-        object-fit: cover;
-    }
     .image_text_boundaries {
-        display: block;
-        justify-content: center;
-        width: 50%;
-        padding: 0 15px;
+        color: white;
+        position: relative;
+        text-align: center;
+
+        @media (min-width: 750px) {
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: 975px) {
+            width: 975px;
+        }
+        @media (min-width: 1260px) {
+            width: 1200px;
+        }
+
         .image_text {
-            display: inline-block;
-            justify-content: center;
-            text-align: center;
+            margin-top: 250px;
+            width: 100%;
+            top:-758px;
+            height: 758px;
             position: absolute;
-            color: white;
-            top: 200px;
-            letter-spacing: .4px;
-            font-family: "Poppins", sans-serif;
+
             .heading {
                 font-size: 48px;
                 font-weight: 500;
-                margin-bottom: 25px;
+                // padding-bottom: 25px;
                 text-transform: uppercase;
-                line-height: 52.8px;
+                // line-height: 52.8px;
+                line-height: 48px;
             }
+
             .sub_text {
                 font-size: 20px;
                 letter-spacing: .4px;
                 line-height: 36px;
-                margin-bottom: 35px;
+                margin: 35px 0;
             }
+
             a {
                 display: block;
                 border: none;
@@ -488,6 +495,7 @@ header {
                     margin-right: -4px;
                 }
             }
+
             a:hover {
                 text-decoration: none;
             }

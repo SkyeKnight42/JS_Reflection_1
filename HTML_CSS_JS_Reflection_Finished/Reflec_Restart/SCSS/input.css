@@ -1289,52 +1289,56 @@ header #overlay {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
   border-top: solid 1px grey;
-}
-
-.image_slideshow .office {
-  width: 100%;
-  height: 759px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  overflow: hidden;
 }
 
 .image_slideshow .image_text_boundaries {
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%;
-  padding: 0 15px;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  .image_slideshow .image_text_boundaries {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 975px) {
+  .image_slideshow .image_text_boundaries {
+    width: 975px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .image_slideshow .image_text_boundaries {
+    width: 1200px;
+  }
 }
 
 .image_slideshow .image_text_boundaries .image_text {
-  display: inline-block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+  margin-top: 250px;
+  width: 100%;
+  top: -758px;
+  height: 758px;
   position: absolute;
-  color: white;
-  top: 200px;
-  letter-spacing: .4px;
-  font-family: "Poppins", sans-serif;
 }
 
 .image_slideshow .image_text_boundaries .image_text .heading {
   font-size: 48px;
   font-weight: 500;
-  margin-bottom: 25px;
   text-transform: uppercase;
-  line-height: 52.8px;
+  line-height: 48px;
 }
 
 .image_slideshow .image_text_boundaries .image_text .sub_text {
   font-size: 20px;
   letter-spacing: .4px;
   line-height: 36px;
-  margin-bottom: 35px;
+  margin: 35px 0;
 }
 
 .image_slideshow .image_text_boundaries .image_text a {
@@ -2038,12 +2042,15 @@ header #overlay {
     padding-top: 110px;
   }
   .image_slideshow .image_text_boundaries {
-    width: 750px;
     margin-left: auto;
     margin-right: auto;
   }
   .image_slideshow .image_text_boundaries .image_text {
-    display: inline-block;
+    margin-top: 300px;
+  }
+  .image_slideshow .image_text_boundaries .image_text .sub_text {
+    width: 70%;
+    margin: 35px auto;
   }
   .card_container .card_width_container {
     width: 750px;
@@ -2191,12 +2198,12 @@ header #overlay {
   .image_slideshow {
     padding-top: 210px;
   }
-  .image_slideshow .image_text_boundaries {
-    width: 950px;
-  }
   .image_slideshow .image_text_boundaries .image_text {
-    display: inline-block;
+    width: 60%;
     text-align: left;
+  }
+  .image_slideshow .image_text_boundaries .image_text .sub_text {
+    margin: 35px 0;
   }
   .image_slideshow .image_text_boundaries .image_text a {
     margin: 0;
@@ -2373,12 +2380,6 @@ header #overlay {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  .image_slideshow .image_text_boundaries {
-    width: 1200px;
-  }
-  .image_slideshow .image_text_boundaries .image_text {
-    width: 1200px;
   }
   .card_container .card_width_container {
     width: 1200px;

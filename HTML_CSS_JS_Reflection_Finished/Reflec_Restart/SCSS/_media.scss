@@ -72,15 +72,20 @@
 
     .image_slideshow {
         padding-top: 110px;
+
         .image_text_boundaries {
-            width: 750px;
+
             margin-left: auto;
             margin-right: auto;
+
             .image_text {
-                display: inline-block;
+                margin-top: 300px;
+                .sub_text {
+                    width: 70%;
+                    margin: 35px auto;
+                }
             }
         }
-    
     }
 
     .card_container {
@@ -242,11 +247,17 @@
 
     .image_slideshow {
         padding-top: 210px;
+
         .image_text_boundaries {
-            width: 950px;
+
             .image_text {
-                display: inline-block;
+                width: 60%;
                 text-align: left;
+                
+                .sub_text {
+                    margin: 35px 0;
+                }
+
                 a {
                     margin: 0;
                 }
@@ -458,9 +469,9 @@
     
     .image_slideshow {
         .image_text_boundaries {
-            width: 1200px;
+
             .image_text {
-                width: 1200px;
+
             }
         }
     }

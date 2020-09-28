@@ -30,7 +30,7 @@ newImageButton.addEventListener('click', () => {
 function validateEmail(emailInput) {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (emailInput.match(mailformat)) { //Validate Email
-        // console.log("Valid Email")
+
         emailError.style.color = 'white'
 
         // If email is valid, store the variable for once an image has successfully been retrieved from the API
@@ -44,7 +44,6 @@ function validateEmail(emailInput) {
         }
 
     } else {
-        // console.log("Invalid Email")
         emailError.style.color = 'red'
     }
 }

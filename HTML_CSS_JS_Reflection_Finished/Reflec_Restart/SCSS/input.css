@@ -1095,6 +1095,8 @@ header div[class*=contents] a:first-of-type {
 
 header .pushy {
   width: 275px;
+  height: auto;
+  display: block;
   background-color: #333645;
 }
 

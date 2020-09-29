@@ -262,6 +262,8 @@ header {
     .pushy {
         // border: solid 1px red;
         width: 275px;
+        height: auto;
+        display: block;
         background-color: $navigation-back;
     
         .header_lists {

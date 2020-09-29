@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <link rel="stylesheet" href="SCSS/input.css"> 
+        <link rel="stylesheet" href="SCSS/pushy.css">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="CSS/font-awesome-4.7.0/css/font-awesome.css">
@@ -15,7 +16,9 @@
     </head>
     <body>
         <header class="" id="headerElement">
-            <div class="site-overlay"></div>
+            <div class="site-overlay"> 
+            </div>
+
             <div class="width_container push">
                 <div class="header_box">
                     <div class="logo_box">
@@ -25,19 +28,22 @@
                         <div class="actions">
                             <a class="btn-support" href="#" target="_blank"><span><i class="fa fa-mouse-pointer"></i></span>Support</a>
                             <a class="btn-contact" href="#" target="_blank"><span><i class="fa fa-paper-plane-o"></i></span>Contact</a>
+
                             <div class="search_container">
                                 <input type=text placeholder="Search...">
                                 <a href="#" class="btn-search"><i class="fa fa-search"></i></a>
                             </div>
+
                             <div class="btn-phone">
                                 <a href="tel:01603704020"><i class="fa fa-phone"></i></a>
                             </div>
-                                <a class="btn-menu my-menu-btn" id="burger_button">
-                                    <div class="burger_line"></div>
-                                    <div class="burger_line"></div>
-                                    <div class="burger_line"></div>
-                                    <p>Menu</p>
-                                </a>
+                            
+                            <a class="my-menu-btn btn-menu" id="burger_button">
+                                <div class="burger_line"></div>
+                                <div class="burger_line"></div>
+                                <div class="burger_line"></div>
+                                <p>Menu</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -50,6 +56,7 @@
                     </form>
                 </div>
             </div>
+
             <div class="nav_width push">
                 <div class="navigation-row hidden-xs hidden-sm"> <!-- Navigation Bar 6 tabs -->
                         <div class="web_hover">
@@ -132,26 +139,8 @@
                         </div>
                 </div>
             </div>
-            
-            <div class="modal_container deactive" id="modal">
-                <div class="modal_title_container">
-                    <h2 class="modal_title">Cookies Policy</h2>
-                </div>
-                <div class="modal_text_container">
-                    <p class="modal_text">
-                        We use cookies to obtain aggregate data regarding site traffic and interaction, in order to identify user trends and obtain insights in order to continually improve our site. These cookies enable us to improve your customer experience as you use our site and help provide you with relevant online marketing.
-                    </p>
-                    <p class="modal_text">
-                        You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.
-                    </p>
-                </div>
-                <div class="modal_button_container">
-                    <a class="modal_settings_button" href="#" id="settings_button">Change Settings</a>
-                    <a class="modal_accept_button" href="#" id="accept_button">accept cookies</a>
-                </div>
-            </div>
-            <div class="deactive" id="overlay"></div>
-            <div class="pushy pushy-right" data-menu-btn-class=".my-menu-btn"> <!-- Menu pop out menu -->
+            <!-- class="pushy pushy-right" data-menu-btn-class=".my-menu-btn" -->
+            <!-- <div > Menu pop out menu -->
                 <div class="pushy-content">
                     <div class="header_lists"> <!-- Min width Content -->
                         <div class="header_list_item_container"> <!-- Contact Us Button-->
@@ -224,7 +213,29 @@
                         <a class="sub_header" href="#">insights</a>
                     </div>
                 </div>
+            <!-- </div> -->
+
+            <div class="modal_container deactive" id="modal">
+                <div class="modal_title_container">
+                    <h2 class="modal_title">Cookies Policy</h2>
+                </div>
+                <div class="modal_text_container">
+                    <p class="modal_text">
+                        We use cookies to obtain aggregate data regarding site traffic and interaction, in order to identify user trends and obtain insights in order to continually improve our site. These cookies enable us to improve your customer experience as you use our site and help provide you with relevant online marketing.
+                    </p>
+                    <p class="modal_text">
+                        You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.
+                    </p>
+                </div>
+                <div class="modal_button_container">
+                    <a class="modal_settings_button" href="#" id="settings_button">Change Settings</a>
+                    <a class="modal_accept_button" href="#" id="accept_button">accept cookies</a>
+                </div>
             </div>
+
+            <div class="deactive" id="overlay">
+            </div>
+
         </header>
             <div class="image_slideshow office push">
                 <div> <!-- Slide Image 1 -->
@@ -589,7 +600,7 @@
                 </div>
             </div>
         </footer>
-        <script type="text/javascript" src="Plugins/pushy-1.3.0/js/pushy.js"></script>
+        <!-- <script type="text/javascript" src="Plugins/pushy-1.3.0/js/pushy.js"></script> -->
         <script type="text/javascript" src="Plugins/slick-1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript" src="JS/slick_slideshow.js"></script>
         <script type="text/javascript" src="JS/sticky_header.js"></script>

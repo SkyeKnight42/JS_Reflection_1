@@ -171,18 +171,19 @@ header {
                         text-align: center;
                         width: 47px;
                         height: 47px;
+                        line-height: 47px;
                         color: black;
                         :hover {
                             text-transform: none;
                             color: black;
                         }
-                        p {    
-                            margin-top: 8px;     
-                            width: 47px;
-                            height: 47px;
-                            line-height: 30px;
-                            font-size: 20px;
-                        }
+                        // p {    
+                        //     margin-top: 8px;     
+                        //     width: 47px;
+                        //     height: 47px;
+                        //     line-height: 30px;
+                        //     font-size: 20px;
+                        // }
                     }
 
                 }

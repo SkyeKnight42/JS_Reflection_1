@@ -990,20 +990,13 @@ header .width_container .search_wide form .btn-search a {
   text-align: center;
   width: 47px;
   height: 47px;
+  line-height: 47px;
   color: black;
 }
 
 header .width_container .search_wide form .btn-search a :hover {
   text-transform: none;
   color: black;
-}
-
-header .width_container .search_wide form .btn-search a p {
-  margin-top: 8px;
-  width: 47px;
-  height: 47px;
-  line-height: 30px;
-  font-size: 20px;
 }
 
 header .nav_width {

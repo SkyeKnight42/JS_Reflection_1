@@ -68,6 +68,10 @@
                 display: none;
             }
         }
+
+        .side_menu {
+            margin-top: -110px;
+        }
     }
 
     .image_slideshow {
@@ -233,8 +237,13 @@
         .nav_width {
             display: block;
         }
-        .pushy {
+
+        .side_menu {
             width: 400px;
+            z-index: 1200;
+            margin-right: -400px;
+            margin-top: -210px;
+            padding: 0;
             .header_lists {
                 display: none;
                 border-top: 0px;
@@ -243,6 +252,14 @@
                 margin-top: 0px;
             }
         }
+
+        .side_menu_transform {
+            transform: translateX(-400px);
+        }
+    }
+
+    .slide_left {
+        transform: translateX(-400px);
     }
 
     .image_slideshow {
@@ -456,7 +473,7 @@
                 }
             }
         }
-        #overlay {
+        #modal_overlay {
             z-index: 45;
             position: fixed;
             top: 0;

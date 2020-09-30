@@ -260,27 +260,35 @@ header {
         }
     }
 
-    .pushy {
+    .side_menu {
         // border: solid 1px red;
-        width: 275px;
-        height: auto;
+        position: fixed;
+        right: 0px;
+        margin-top: -168px;
+        margin-left: auto;
+        margin-right: -276px;
+        z-index: 1000;
+        height: 100%;
+        width: 276px;
+        padding: 21px;
+        transition: all .2s ease-in-out;
         display: block;
         background-color: $navigation-back;
-    
+        overflow: scroll;
+        
         .header_lists {
-            width: 100%;
+            width: 216px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            border-top: 21px;
+
             .header_list_item_container {
                 border-radius: 3px;
                 border: solid 1px #1e1e20;
-                // color: white;
                 height: auto;
-                // margin: 21px 21px 0;
                 width: 216px;
-                margin: 21px 20px 0;
+                margin: 21px 0 0;
+                background-color: #262830;
 
                 a {
                     color: white;
@@ -291,10 +299,12 @@ header {
                 }
                 .block_link {
                     font-size: 16px;
-                    padding: 10px 0px;
+                    line-height: 42px;
+                    display: block;
+                    height: 42px;
+                    // padding: 10px 0px;
                     border-top: solid 1px #444450;
                     border-bottom: solid 1px #1e1e20;
-                    background-color: #262830;
                 }
                 a, .block_link:first-of-type {
                     border-top: none;
@@ -329,6 +339,42 @@ header {
                     }
                 }
             }
+
+            .contact {
+                background-color: $navigation-back;
+            }
+
+            .header_button_main {
+                border-radius: 3px;
+                border: solid 1px #1e1e20;
+                width: 216px;
+                margin: 21px 0 0;
+                height: 116px;
+                padding: 20px;
+                text-align: center;
+                &:hover {
+                    background-color: #3d404e;
+                }
+                .header_button {
+                    // margin-top: 20px;
+                    // border: solid 1px red;
+
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    i {
+                        display: block;
+                        margin-bottom: 10px;
+                        font-size: 25px;
+                    }
+                    span {
+                        color: white;
+                        font-size: 10px;
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
         }
     
         .menu_lists_container {
@@ -343,10 +389,11 @@ header {
                 text-transform: uppercase;
                 text-decoration: none;
                 width: 100%;
-                padding: 18px;
+                padding: 20px;
                 line-height: 16px;
-                font-size: 14px;
-                background-color: #2e2e41;
+                font-size: 16px;
+                height: 56px;
+                background-color: #262834;
                 margin: 0;
                 border-top: solid 1px #444450;
                 border-bottom: solid 1px #1e1e20; 
@@ -355,8 +402,32 @@ header {
                 background-color: #262830;
                 font-size: 12px;
                 padding: 15px 20px;
+                &:hover {
+                    background-color: #526781;
+                }
+            }
+            .menu_header {
+                &:hover {
+                    background-color: #3d404e;
+                }
             }
         }
+    }
+
+    .menu_overlay {
+        display: none;
+        z-index: 50;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.5);
+    }
+
+    .side_menu_transform {
+        transform: translateX(-275px);
+        transition: all .2s ease-in-out;
     }
 
     .modal_container {
@@ -418,8 +489,8 @@ header {
         }
     }
 
-    #overlay {
-        // display: none;
+    .modal_overlay {
+        display: none;
         z-index: 45;
         position: fixed;
         top: 0;
@@ -427,6 +498,10 @@ header {
         right: 0;
         bottom: 0;
         background-color: rgba(0,0,0,.5);
+    }
+
+    .active {
+        display: block;
     }
 }
 

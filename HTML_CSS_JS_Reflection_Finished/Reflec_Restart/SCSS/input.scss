@@ -1085,4 +1085,16 @@ header {
 // ^^^^^^^^^^^
 // Happens when the viewport is less than 750 pixels
 
+.push-this {
+    transition: all .2s ease-in-out;
+}
+
+.push-left {
+    transform: translateX(-275px);
+    transition: all .2s ease-in-out;
+
+    @media (min-width: 975px) {
+        transform: translateX(-400px);
+    }
+}
 @import "_media.scss";

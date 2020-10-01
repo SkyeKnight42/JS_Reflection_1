@@ -2040,6 +2040,25 @@ header .active {
   display: none;
 }
 
+.push-this {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.push-left {
+  -webkit-transform: translateX(-275px);
+          transform: translateX(-275px);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+@media (min-width: 975px) {
+  .push-left {
+    -webkit-transform: translateX(-400px);
+            transform: translateX(-400px);
+  }
+}
+
 @media (min-width: 750px) {
   .sticky_header {
     -webkit-transform: translateY(-110px);

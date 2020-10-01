@@ -21,6 +21,7 @@ menu_overlay.addEventListener('click', function() {
     SideMenuOff()
 })
 
+
 function SideMenuOn() {
     burgerLines[1].style.opacity = "0"
     burgerLines[0].classList.add('tilt_left')

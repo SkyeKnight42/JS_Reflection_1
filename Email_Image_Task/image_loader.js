@@ -10,41 +10,41 @@ const inputField = document.getElementById('email_input')
 const emailError = document.getElementById('email_error')
 const APIError = document.getElementById('API_error')
 
-emailError.style.color = 'white'
-APIError.style.color = 'white'
-
 let testedEmail
 let imageURL
 previewImage()
 
-addItemButton.addEventListener('click', () => {
-    validateEmail(inputField.value)
+addItemButton.addEventListener('click', function() {
+    let email = inputField.value
 
-    previewImage()
+    if (validateEmail(email)) {
+        emailError.textContent = ""
+        
+        const testedEmail = document.getElementById(email)
+        if (testedEmail) {
+            addImagetoBox(imageURL, email)
+        } else {
+            createImageBox(imageURL, email)
+        }
+        previewImage()
+
+    } else {
+        emailError.textContent = "Invalid Email Address"
+    }
+
+
 })
 
-newImageButton.addEventListener('click', () => {
+newImageButton.addEventListener('click', function() {
     previewImage();
 })
 
 function validateEmail(emailInput) {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (emailInput.match(mailformat)) { //Validate Email
-
-        emailError.style.color = 'white'
-
-        // If email is valid, store the variable for once an image has successfully been retrieved from the API
-        testedEmail = document.getElementById(emailInput) 
-
-        // searchPhotos(emailInput)
-        if (testedEmail) {
-            addImagetoBox(imageURL, emailInput)
-        } else {
-            createImageBox(imageURL, emailInput)
-        }
-
+        return true
     } else {
-        emailError.style.color = 'red'
+        return false
     }
 }
 
@@ -56,8 +56,15 @@ function createImageBox(_image, _email) {
     imageBox.classList.add('image_box')
     imageBox.id= email
     imageContainer.appendChild(imageBox)
-    // imageBox.append(<p>Test</p>)
-    imageBox.insertAdjacentHTML("beforeend", `<p>${email}</p><img src="${image}" class="image">`)
+
+    const emailText = document.createElement('p')
+    emailText.textContent = email
+    const smallImage = document.createElement('img')
+    smallImage.src = image
+    smallImage.classList.add('image')
+
+    imageBox.appendChild(emailText)
+    imageBox.appendChild(smallImage)
 }
 
 function addImagetoBox(_image, _email) {
@@ -65,25 +72,27 @@ function addImagetoBox(_image, _email) {
     let email = _email
 
     const imageBox = document.getElementById(email)
-    imageBox.insertAdjacentHTML("beforeend", `<img src="${image}" class="image">`)
 
+    const smallImage = document.createElement('img')
+    smallImage.src = image
+    smallImage.classList.add('image')
+
+    imageBox.appendChild(smallImage)
 }
 
 function previewImage() {
     const url = "https://api.unsplash.com/photos/random/?client_id="+AccessKey
     fetch(url)
         .then(function (data) {
-            APIError.style.color='white'
             return data.json()
         })
         .then(function(data) {
             imageURL = data.urls.regular
             document.getElementById('preview_image').src = imageURL
-            APIError.style.color='white' 
         })
-        .catch(() => {
+        .catch(function() {
             console.log("Fail")
-            APIError.style.color = 'red'
+            APIError.textContent = "API Error"
         })
 }
 

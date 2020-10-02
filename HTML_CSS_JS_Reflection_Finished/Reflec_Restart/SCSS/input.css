@@ -2105,9 +2105,6 @@ header .active {
     height: 56px;
     width: 174px;
     padding: 5px 15px;
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 2;
     border-radius: 3px 0 0 3px;
     border: 1px solid grey;
     outline: none;
@@ -2249,7 +2246,15 @@ header .active {
     display: block;
     margin-right: 20px;
     width: 143px;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
     color: white;
+    opacity: 1;
+  }
+  header .width_container .header_box .actions_container .actions .button-fade {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: 0;
   }
   header .width_container .header_box .actions_container .actions .btn-support {
     width: 143px;
@@ -2269,10 +2274,28 @@ header .active {
     width: 63px;
   }
   header .width_container .header_box .actions_container .actions .search_container input {
+    width: 300px;
     display: none;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: 0;
   }
   header .width_container .header_box .actions_container .actions .search_container a {
     border-radius: 3px;
+  }
+  header .width_container .header_box .actions_container .actions .search_container .search-fade-in {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: 1;
+  }
+  header .width_container .header_box .actions_container .actions .search_container .display_block {
+    display: block;
+  }
+  header .width_container .header_box .actions_container .actions .display_none {
+    display: none;
+  }
+  header .width_container .header_box .actions_container .actions .search_width {
+    width: 363px;
   }
   header .width_container .header_box .actions_container .actions .btn-menu {
     -ms-grid-column: 4;
@@ -2405,6 +2428,7 @@ header .active {
   header .width_container .header_box .actions_container .actions .search_container input {
     display: block;
     width: 240px;
+    opacity: 1;
   }
   header .width_container .header_box .actions_container .actions .search_container a {
     border-radius: 0 3px 3px 0;

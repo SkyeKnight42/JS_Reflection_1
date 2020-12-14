@@ -12,6 +12,7 @@ const APIError = document.getElementById('API_error')
 
 let testedEmail
 let imageURL
+let imageDescription
 previewImage()
 
 addItemButton.addEventListener('click', function() {
@@ -48,9 +49,10 @@ function validateEmail(emailInput) {
     }
 }
 
-function createImageBox(_image, _email) {
+function createImageBox(_image, _email, _alt) {
     let image = _image
     let email = _email
+    let alt = _alt
 
     const imageBox = document.createElement('div')
     imageBox.classList.add('image_box')
@@ -61,6 +63,7 @@ function createImageBox(_image, _email) {
     emailText.textContent = email
     const smallImage = document.createElement('img')
     smallImage.src = image
+    smallImage.alt = imageDescription
     smallImage.classList.add('image')
 
     imageBox.appendChild(emailText)
@@ -75,6 +78,7 @@ function addImagetoBox(_image, _email) {
 
     const smallImage = document.createElement('img')
     smallImage.src = image
+    smallImage.alt = imageDescription
     smallImage.classList.add('image')
 
     imageBox.appendChild(smallImage)
@@ -88,7 +92,11 @@ function previewImage() {
         })
         .then(function(data) {
             imageURL = data.urls.regular
-            document.getElementById('preview_image').src = imageURL
+            imageDescription = data.description
+            // console.log(data.description)
+            let previewImage = document.getElementById('preview_image')
+            previewImage.src = imageURL
+            previewImage.alt = imageDescription
         })
         .catch(function() {
             console.log("Fail")

@@ -1,0 +1,608 @@
+// Happens when the viewport is 750 pixels or wider
+@media (min-width: 750px) {  
+
+    .sticky_header {
+        transform: translateY(-110px)
+    }
+
+    header {
+        height: 110px;
+        .width_container {
+            height: 70px;
+            width: 750px;
+            .header_box {
+                padding: 0 0;
+                margin: 0 -15px;
+                height: 70px;
+                width: 750px;
+                .logo_box {
+                    height: 60px;
+                    padding: 0 15px;
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+                .actions_container { 
+                    display: block;
+                    height: 70px;
+                    .actions {
+                        height: 70px;
+                        .btn-phone {
+                            display: none;
+                        }
+                        .search_container {
+                            display: flex;
+                            margin-right: 20px;
+                            input {
+                                display: block;
+                                height: 56px;
+                                width: 174px;
+                                padding: 5px 15px;
+                                // grid-column-start: 1;
+                                // grid-column-end: 2;
+                                border-radius: 3px 0 0 3px;
+                                border: 1px solid grey;
+                                outline: none;
+                            }
+                            a { // Search Box Button
+                                display: inline-block;
+                                background-color: #999aa2;
+                                border-radius: 0 3px 3px 0;
+                                height: 56px;
+                                width: 63px;
+                                text-align: center;
+                                color: white;
+                                &:hover {
+                                    background-color: #7e808a;
+                                }
+                                i {
+                                    font-size: 23px;
+                                    width: 43px;
+                                    height: 56px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .search_wide {
+                display: none;
+            }
+        }
+
+        .side_menu {
+            margin-top: -110px;
+        }
+    }
+
+    .image_slideshow {
+        padding-top: 110px;
+
+        .image_text_boundaries {
+
+            margin-left: auto;
+            margin-right: auto;
+
+            .image_text {
+                margin-top: 300px;
+                .sub_text {
+                    width: 70%;
+                    margin: 35px auto;
+                }
+            }
+        }
+    }
+
+    .card_container {
+        .card_width_container {
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            .card_telecoms,
+            .card_cybers {
+                width: 345px;
+                margin-right: 30px;
+                .btn {
+                    margin-top: 22px;
+                }
+            }
+            .card_web,
+            .card_dev {
+                width: 345px;
+            }
+        }
+    }
+
+    .description_block {
+        .description_background {
+        .description_width {
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        }
+    }
+
+    .latest .latest_boundaries {
+        width: 750px;
+    }
+
+    .latest_width {
+        .latest_column {
+            width: 750px;
+            [class*=news_info] {
+                width: 345px;
+                margin: none;
+            }
+            .second, 
+            .third {
+                padding-top: 0;
+                margin-top: 0;
+            }
+            .third {
+                display: none;
+            }
+        }
+    }
+
+    .logo_container {
+        display: flex;
+        .logo_segment {
+            width: 750px;
+        }
+    }
+
+    .about_links {
+        .about_links_container {
+            width: 750px;
+            .about_item {
+                width: 375px;
+            }
+        }
+    }
+
+    .sponsor {
+        display: block;
+    }
+}
+
+// Happens when the viewport is 975 pixels or wider
+@media (min-width: 975px) {
+
+    .sticky_header {
+        transform: translateY(-211px)
+    }
+
+    header {
+        height: 210px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        .width_container {
+            width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            .header_box {
+                width: 970px;
+                .logo_box {
+                    height: 65px;
+                    padding: 0 15px;
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    img {
+                        width: 364px;
+                    }
+                }
+                .actions_container { 
+                    margin-right: 0px;
+                    .actions {
+                        height: 100%;
+                        .btn-support,
+                        .btn-contact {
+                            display: block;
+                            margin-right: 20px;
+                            width: 143px;
+                            transition: opacity .5s;
+                            color: white;
+                            opacity: 1;
+                        }
+                        .button-fade {
+                            transition: opacity .5s;
+                            opacity: 0;
+                        }
+                        .btn-support {
+                            width: 143px;
+                            background-color: #4183d7 !important;  
+                            &:hover {
+                                background-color: #2a6ec6 !important;
+                            }
+                        }
+                        .btn-contact {
+                            width: 151px;
+                            background-color: #999aa2 !important;
+                            &:hover {
+                                background-color: #84858f !important;
+                            }
+                        }
+                        .search_container {
+                            // border: solid 1px red;
+                            width: 63px;
+                            input {
+                                width: 300px;
+                                display: none;
+                                transition: opacity .5s;
+                                opacity: 0;
+                            }
+                            a {
+                                border-radius: 3px;
+                            }
+                            .search-fade-in {
+                                transition: opacity .5s;
+                                opacity: 1;
+                            }
+                            .display_block {
+                                display: block;
+                            }
+                        }
+                        .display_none {
+                            display: none;
+                        }
+                        .search_width {
+                            width: 363px;
+                        }
+                        .btn-menu {
+                            grid-column-start: 4;
+                            grid-column-end: 5;
+                        }
+                    }
+                }
+            }
+        }
+        .nav_width {
+            display: block;
+        }
+
+        .side_menu {
+            width: 400px;
+            z-index: 1200;
+            margin-right: -400px;
+            margin-top: -210px;
+            padding: 0;
+            .header_lists {
+                display: none;
+                border-top: 0px;
+            }
+            .menu_lists_container {
+                margin-top: 0px;
+            }
+        }
+
+        .side_menu_transform {
+            transform: translateX(-400px);
+        }
+    }
+
+    .slide_left {
+        transform: translateX(-400px);
+    }
+
+    .image_slideshow {
+        padding-top: 210px;
+
+        .image_text_boundaries {
+
+            .image_text {
+                width: 60%;
+                text-align: left;
+                
+                .sub_text {
+                    margin: 35px 0;
+                }
+
+                a {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .card_container {
+        .card_width_container {
+            width: 970px;
+            .card_bespoke,
+            .card_it,
+            .card_digital {
+                width: 293px;
+            }
+            .card_bespoke,
+            .card_it {
+                margin-right: 30px;
+            }
+            .card_it .btn {
+                margin-top: 22px;
+            }
+            .card_telecoms,
+            .card_cybers {
+                width: 455px;
+                margin-right: 30px;
+                .btn {
+                    margin-top: 0;
+                }
+            }
+            .card_web,
+            .card_dev {
+                width: 455px;
+            }
+        }
+    }
+
+    .description_block {
+        .description_background {
+        .description_width {
+            width: 970px;
+            }
+        }
+    }
+
+    .latest .latest_boundaries {
+        width: 970px;
+    }
+
+    .latest_width {
+        .latest_column {
+            width: 970px;
+            [class*=news_info] {
+                width: 455px;
+            }
+        }
+    }
+
+    .logo_container {
+        .logo_segment {
+            width: 970px;
+            .logo_box {
+                img {
+                    max-height: 62px;
+                }
+                .logo_pop_out {
+                    bottom: 263px;
+                }
+                .pop_crane,
+                .pop_northern {
+                    bottom: 307px;
+                }
+            }
+        }
+    }
+
+    .about_links {
+        .about_links_container {
+            width: 970px;
+            .about_item {
+                width: 485px;
+            }
+        }
+    }
+
+    .sponsor {
+        height: 210px;
+        .sponsor_container {
+            width: 950px;
+        }
+    }
+}
+
+// Happens when the viewport is 1260 pixels or wider
+@media (min-width: 1260px) {
+    header {
+        .width_container {
+            width: 1200px;
+            .header_box {
+                width: 1200px;
+                .logo_box {
+                    height: 65px;
+                    width: 400px;
+                    padding: 0 15px;
+                    img {
+                        width: 370px;
+                    }
+                }
+                .actions_container { 
+                    .actions {
+                        .search_container {
+                            width: auto;
+                            input {
+                                display: block;
+                                width: 240px;
+                                opacity: 1;
+                            }
+                            a {
+                                border-radius: 0 3px 3px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav_width {
+            .navigation-row  {
+                width: 1200px; 
+                .nav { 
+                    width: 200px; 
+                }
+            }
+        }
+        div[class*=contents] {
+            .content_position {
+                width: 1200px;
+                a {   
+                    font-size: 16px;
+                    line-height: 23px;
+                }
+            }
+        }
+        .modal_container {
+            width: 600px;
+            height: auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background-color: white;
+            // margin: auto auto;
+            border-radius: 5px;
+            .modal_title_container {
+                width: 100%;
+                height: auto;
+                padding: 15px;
+                border-bottom: solid 1px grey;
+                .modal_title {
+                    text-transform: capitalize;
+                    font-size: 25px;
+                }
+            }
+            .modal_text_container {
+                width: 100%;
+                height: auto;
+                padding: 20px 15px;
+                border-bottom: solid 1px grey;
+                .modal_text {
+                    // color: darkslategrey;
+                    color: grey;
+                    font-size: 17px;
+                }
+            }
+            .modal_button_container {
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 10px;
+                a {
+                    cursor: pointer;
+                    display: inline-block;
+                    color: white;
+                    text-transform: uppercase;
+                    width: auto;
+                    padding: 10px 40px;
+                    border-radius: 3px;
+                }
+                a:hover {
+                    text-decoration: none;
+                    color: white;
+                }
+                .modal_settings_button {
+                    background-color: grey;
+                }
+                .modal_accept_button {
+                    background-color: #926fb1;
+                }
+            }
+        }
+        #modal_overlay {
+            z-index: 45;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.5);
+        }
+    }
+    
+    .image_slideshow {
+        .image_text_boundaries {
+
+            .image_text {
+
+            }
+        }
+    }
+
+    .card_container {
+        .card_width_container {
+            width: 1200px;
+            .card_bespoke,
+            .card_it,
+            .card_digital {
+                width: 370px;
+            }
+            .card_it .btn {
+                margin-top: 0;
+            }
+            .card_telecoms,
+            .card_cybers,
+            .card_web,
+            .card_dev {
+                width: 270px;
+                margin-right: 30px;
+            }
+            .card_dev {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .description_block {
+        .description_background {
+        .description_width {
+            width: 1200px;
+                .description_placement {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .latest .latest_boundaries {
+        width: 1200px;
+    }
+
+    .latest_width {
+        .latest_column {
+            width: 1200px;
+            [class*=news_info] {
+                width: 370px;
+                margin: none;
+            }
+            .third {
+                display: block;
+            }
+        }
+    }
+
+    .logo_container {
+        .logo_segment {
+            width: 1200px;
+            .logo_box {
+                img {
+                    max-height: 70px;
+                }
+                .logo_pop_out {
+                    bottom: 267px;
+                }
+                .pop_crane,
+                .pop_northern {
+                    bottom: 311px;
+                }
+            }
+        }
+    }
+
+    .about_links {
+        .about_links_container {
+            width: 1200px;
+            .about_item {
+                width: 300px;
+            }
+        }
+    }
+
+    .sponsor {
+        height: 188px;
+        .sponsor_container {
+            width: 1200px;
+        }
+    }
+}
+
+// And because CSS is cascading, code further down, 
+// overrides the previous code if possible

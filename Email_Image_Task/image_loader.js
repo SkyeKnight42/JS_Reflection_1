@@ -9,6 +9,8 @@ const newImageButton = document.getElementById('new_button')
 const inputField = document.getElementById('email_input')
 const emailError = document.getElementById('email_error')
 const APIError = document.getElementById('API_error')
+const placeholderImage = document.getElementById('placeholder')
+const APIImage = document.getElementById('preview_image')
 
 let testedEmail
 let imageURL
@@ -94,13 +96,20 @@ function previewImage() {
             imageURL = data.urls.regular
             imageDescription = data.description
             // console.log(data.description)
-            let previewImage = document.getElementById('preview_image')
-            previewImage.src = imageURL
-            previewImage.alt = imageDescription
+            APIImage.src = imageURL
+            APIImage.classList.add('show')
+            APIImage.classList.remove('hide')
+            placeholderImage.classList.add('hide')
+            placeholderImage.classList.remove('show')
+            APIImage.alt = imageDescription
         })
         .catch(function() {
-            console.log("Fail")
+            // console.log("Fail")
             APIError.textContent = "API Error"
+            APIImage.classList.add('hide')
+            APIImage.classList.remove('show')
+            placeholderImage.classList.add('show')
+            placeholderImage.classList.remove('hide')
         })
 }
 

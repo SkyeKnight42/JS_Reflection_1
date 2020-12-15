@@ -37,8 +37,8 @@
                                 height: 56px;
                                 width: 174px;
                                 padding: 5px 15px;
-                                // grid-column-start: 1;
-                                // grid-column-end: 2;
+                                grid-column-start: 1;
+                                grid-column-end: 2;
                                 border-radius: 3px 0 0 3px;
                                 border: 1px solid grey;
                                 outline: none;
@@ -201,13 +201,7 @@
                             display: block;
                             margin-right: 20px;
                             width: 143px;
-                            transition: opacity .5s;
                             color: white;
-                            opacity: 1;
-                        }
-                        .button-fade {
-                            transition: opacity .5s;
-                            opacity: 0;
                         }
                         .btn-support {
                             width: 143px;
@@ -224,30 +218,13 @@
                             }
                         }
                         .search_container {
-                            // border: solid 1px red;
                             width: 63px;
                             input {
-                                width: 300px;
                                 display: none;
-                                transition: opacity .5s;
-                                opacity: 0;
                             }
                             a {
                                 border-radius: 3px;
                             }
-                            .search-fade-in {
-                                transition: opacity .5s;
-                                opacity: 1;
-                            }
-                            .display_block {
-                                display: block;
-                            }
-                        }
-                        .display_none {
-                            display: none;
-                        }
-                        .search_width {
-                            width: 363px;
                         }
                         .btn-menu {
                             grid-column-start: 4;
@@ -413,7 +390,6 @@
                             input {
                                 display: block;
                                 width: 240px;
-                                opacity: 1;
                             }
                             a {
                                 border-radius: 0 3px 3px 0;

@@ -1,91 +1,74 @@
 
-// $preview_image = $('#preview_image')
-// $placeholder_image = $('#placeholder')
-// $add_button = $('#add_button')
-// $new_image_button = $('#new_button')
-// $email_input = $('#email_input')
-// var email
+$preview_image = $('#preview_image')
+$placeholder_image = $('#placeholder')
+$add_button = $('#add_button')
+$new_image_button = $('#new_button')
+$email_input = $('#email_input')
+$email = null
+var email_array = []
+var imageURL
 
 $( document ).ready(function() {
     previewImage()
 })
 
-// console.log($preview_image)
-
 function previewImage() {
-    var accessKey = 'XAtVdRNagvmx4_-hzujS5jq9N3BXMNBWE1MoQPBhhA0'
-    var url = 'https://api.unsplash.com/photos/random/?client_id=' + accessKey
-    var imageURL = ""
-    var previousImageURL = ""
+    var imageID = null
+    var id
 
-    // Set the image
-    $.getJSON(url , function(data) {
-        // imageURL = data.urls.regular
-        // $preview_image.attr('src', imageURL)
-        // $placeholder_image.attr('class', 'placeholder preview_image hide')
-        // console.log(imageURL)
-        // console.log(previousImageURL)
+    // Prevents the last image being repeated
+    do {
+        id = Math.floor(Math.random()*1000)
+    } while (imageID == id)
+
+    $.getJSON('https://picsum.photos/id/' + id + '/info', function(data) {
+        imageURL = 'https://picsum.photos/id/' + data.id + '/500/500'
+        $preview_image.attr('src', imageURL)
+        $placeholder_image.attr('class', 'placeholder preview_image hide')
+        imageID = id
     })
-    // console.log(url )
-    // getImage(url, accessKey)
-
-    // console.log(imageURL)
-    // console.log(previousImageURL)
-    // If the image is repeating
-    // do {
-    //     $.getJSON(url + accessKey, function(data) {
-    //         imageURL = data.urls.regular
-    //         $preview_image.attr('src', imageURL)
-    //         $placeholder_image.attr('class', 'placeholder preview_image hide')
-    //     })
-    // } while (imageURL = previousImageURL)
-
-    // previousImageURL = imageURL
-
-    // console.log(imageURL)
-    // console.log(previousImageURL)   
 }
 
-// function getImage(_url, _accessKey) {
-//     $.getJSON(_url + _accessKey, function(data) {
-//         // imageURL = data.urls.regular
-//         // $preview_image.attr('src', imageURL)
-//         // $placeholder_image.attr('class', 'placeholder preview_image hide')
-//         // console.log(imageURL)
-//         // console.log(previousImageURL)
-//         return data
-//     })
-// }
+function validateEmail() {
+    var _email = $email_input.val()
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
 
-// function validateEmail() {
-//     var _email = $email_input.val()
-//     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+    if (regex.test(_email)) {
+        $email = $email_input.val()
+        return true
+    } else {
+        return false
+    }
 
-//     if (regex.test(_email)) {
-//         email = $email_input.val()
-//         return true
-//     } else {
-//         return false
-//     }
+}
 
-// }
+$add_button.click(function() {
 
-// $add_button.click(function() {
+    // is the email address valid
+    if (validateEmail()) {
 
-//     // is the email address valid
-//     if (validateEmail()) {
-//         // $email_image_container = $('#' + email)
-//         console.log('---')
-//         // console.log($('#' + email))
-//         if ($('#' + email) == error) {
-//             console.log('pass')
-//         } else {
-//             console.log('fail')
-//         }
-//     }
+        // email has passed validation
+        $email_image_container = $('#email_image_container')
+        console.log($email_image_container)
 
-// })
+        // does the email element already exist
 
-// $new_image_button.click(function() {
-//     alert( "Handler for .click() called." );
-// })
+        if (jQuery.inArray($email, email_array) >= 0) {
+            $image_container = $('#' + $email)
+            $image_container.append('<img src="' + imageURL + '">')
+        } else {
+            console.log($email)
+            var imageContainer = '<div class="image_container id="' +$email + '><img src="' + imageURL + '"></div>' 
+            var emailContainer = '<div class="email_container"><p>'+ $email +'</p>' + imageContainer + '</div>'
+            $email_image_container.append(emailContainer)
+            email_array.push($email)
+        }
+
+        previewImage()
+    }
+
+})
+
+$new_image_button.click(function() {
+    previewImage()
+})

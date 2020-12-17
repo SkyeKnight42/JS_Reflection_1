@@ -108,22 +108,22 @@ body {
 
     }
 
-    .image_container {
-        width: 100%;
-        height: auto;
-        padding: 50px;
+    .email_image_container {
 
-        .image_box {
-
-            .container {
-                display: flex;
+        .email_container {
+            p {
+                color: white;
+                font-size: 24px;
             }
-
-            img {
-                max-height: 400px;
-                max-width: 100%;
-                margin-bottom: 25px;
-                // max-width: 80%;
+    
+            .image_container {
+                display: flex;
+                
+                img {
+                    max-height: 400px;
+                    max-width: 100%;
+                    margin-bottom: 25px;
+                }
             }
         }
     }
@@ -133,14 +133,6 @@ body {
     .content_container {
         width: 750px;
         margin: 0 auto;
-
-        .image_container {
-            .image_box {
-                img {
-                    margin: 25px;
-                }
-            }
-        }
     }
 }
 
@@ -151,22 +143,9 @@ body {
 @media (min-width: 1200px) {
     .content_container {
         display: flex;
-        // border: solid 1px black;
         width: 1200px;
         flex-wrap: wrap;
-        // h2 {
-        //     margin: 25px 100px 0;
-        //     padding: 0 25px;
-        // }
-        // .API_error {
-        //     display: block;
-        //     width: 100%;
-        //     // height: 32px;
-        //     // font-size: 24px;
-        //     // color: red;
-        //     margin: 0 50px;
-        //     padding-left: 50px;
-        // }
+
         .image_preview {
             margin: 0 100px 0;
             width: 1200px;
@@ -222,38 +201,6 @@ body {
                 height: 25px;
                 border: solid 1px darkgrey;
                 padding: 17px 25px;
-            }
-        }
-        .image_container {
-            // margin: 0 100px 50px;
-            // padding: 50px 50px;
-            width: 1200px;
-            height: auto;
-            // border: solid 1px black;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            .image_box {
-                margin: 0 50px 0;
-                display: flex;
-                flex-wrap: wrap;
-                width: auto;
-                height: auto;
-                border: solid 1px grey;
-                padding: 25px;
-                .image {
-                    display: inline-block;
-                    height: 200px;
-                    width: 200px;
-                    object-fit: cover;
-                    overflow: hidden;
-                    padding: 10px;
-                }
-                p {
-                    width: 100%;
-                    display: block;
-                    padding: 10px;
-                }
             }
         }
     }

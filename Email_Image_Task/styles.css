@@ -111,19 +111,18 @@ body {
   border-color: white;
 }
 
-.content_container .image_container {
-  width: 100%;
-  height: auto;
-  padding: 50px;
+.content_container .email_image_container .email_container p {
+  color: white;
+  font-size: 24px;
 }
 
-.content_container .image_container .image_box .container {
+.content_container .email_image_container .email_container .image_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content_container .image_container .image_box img {
+.content_container .email_image_container .email_container .image_container img {
   max-height: 400px;
   max-width: 100%;
   margin-bottom: 25px;
@@ -133,9 +132,6 @@ body {
   .content_container {
     width: 750px;
     margin: 0 auto;
-  }
-  .content_container .image_container .image_box img {
-    margin: 25px;
   }
 }
 
@@ -199,44 +195,6 @@ body {
     height: 25px;
     border: solid 1px darkgrey;
     padding: 17px 25px;
-  }
-  .content_container .image_container {
-    width: 1200px;
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .content_container .image_container .image_box {
-    margin: 0 50px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: auto;
-    height: auto;
-    border: solid 1px grey;
-    padding: 25px;
-  }
-  .content_container .image_container .image_box .image {
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    overflow: hidden;
-    padding: 10px;
-  }
-  .content_container .image_container .image_box p {
-    width: 100%;
-    display: block;
-    padding: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

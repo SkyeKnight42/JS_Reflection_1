@@ -14,6 +14,11 @@ body {
   color: white;
 }
 
+.error_text {
+  text-transform: uppercase;
+  color: red;
+}
+
 .content_container {
   width: 100%;
   text-align: center;
@@ -22,6 +27,10 @@ body {
 .content_container .API_error {
   font-size: 24px;
   color: red;
+}
+
+.content_container .transparent {
+  opacity: 0%;
 }
 
 .content_container img {
@@ -111,6 +120,10 @@ body {
   border-color: white;
 }
 
+.content_container .email_image_container {
+  width: 100%;
+}
+
 .content_container .email_image_container .email_container p {
   color: white;
   font-size: 24px;
@@ -120,12 +133,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .content_container .email_image_container .email_container .image_container img {
   max-height: 400px;
   max-width: 100%;
-  margin-bottom: 25px;
+  margin: 0 25px 50px;
 }
 
 @media (min-width: 768px) {
@@ -135,7 +153,17 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 993px) {
+  .content_container {
+    width: 975px;
+  }
+  .content_container .email_image_container .image_container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1218px) {
   .content_container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -163,6 +191,9 @@ body {
     overflow: hidden;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .content_container .input_container {
+    width: 100%;
   }
   .content_container .input_container h2 {
     padding-top: 25px;
@@ -195,6 +226,21 @@ body {
     height: 25px;
     border: solid 1px darkgrey;
     padding: 17px 25px;
+  }
+  .content_container .email_image_container {
+    width: 100%;
+  }
+  .content_container .email_image_container .email_container .image_container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .content_container .email_image_container .email_container .image_container img {
+    max-height: 350px;
+    margin: 0 25px 50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

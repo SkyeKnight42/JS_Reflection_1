@@ -15,15 +15,26 @@ body {
     color: white;
 }
 
+.error_text {
+    text-transform: uppercase;
+    color: red;
+}
+
 .content_container {
     width: 100%;
     text-align: center;
+
     h2 {
 
     }
+
     .API_error {
         font-size: 24px;
         color: red;
+    }
+    
+    .transparent {
+        opacity: 0%;
     }
 
     img {
@@ -32,6 +43,7 @@ body {
         border-right: solid 5px rgb(214, 214, 214);
         border-bottom: solid 5px rgb(185, 185, 185);
     }
+
     .image_preview {
         display: block;
         width: 80%;
@@ -109,6 +121,7 @@ body {
     }
 
     .email_image_container {
+        width: 100%;
 
         .email_container {
             p {
@@ -118,11 +131,12 @@ body {
     
             .image_container {
                 display: flex;
-                
+                justify-content: center;
+                flex-wrap: wrap;
                 img {
                     max-height: 400px;
                     max-width: 100%;
-                    margin-bottom: 25px;
+                    margin: 0 25px 50px;
                 }
             }
         }
@@ -136,11 +150,19 @@ body {
     }
 }
 
-@media (min-width: 978px) {
-    
+@media (min-width: 993px) {
+    .content_container {
+        width: 975px;
+
+        .email_image_container {
+            .image_container {
+                flex-wrap: wrap;
+            }
+        }
+    }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1218px) {
     .content_container {
         display: flex;
         width: 1200px;
@@ -170,6 +192,7 @@ body {
             // width: 1200px;
             // padding: 0 100px;
             // border-bottom: none;
+            width: 100%;
             h2 {
                 padding-top: 25px;
                 margin: 0 0;
@@ -201,6 +224,23 @@ body {
                 height: 25px;
                 border: solid 1px darkgrey;
                 padding: 17px 25px;
+            }
+        }
+
+        .email_image_container {
+            width: 100%;
+
+            .email_container {
+
+                .image_container {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    img {
+                        max-height: 350px;
+                        margin: 0 25px 50px;
+                    }
+                }
             }
         }
     }

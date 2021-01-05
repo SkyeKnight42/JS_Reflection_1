@@ -50,7 +50,7 @@ function previewImage() {
             })
 
             
-        }, 100)
+        }, 50)
     } else {
         $placeholder_image.attr('class', 'placeholder preview_image')
         $preview_image.attr('class', 'preview_image hide')

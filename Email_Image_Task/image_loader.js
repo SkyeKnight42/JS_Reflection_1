@@ -60,7 +60,6 @@ function createImageBox(_image, _email, _alt) {
     imageBox.classList.add('image_box')
     imageBox.id= email
     imageContainer.appendChild(imageBox)
-<<<<<<< HEAD
 
     const emailText = document.createElement('p')
     emailText.textContent = email
@@ -71,10 +70,6 @@ function createImageBox(_image, _email, _alt) {
 
     imageBox.appendChild(emailText)
     imageBox.appendChild(smallImage)
-=======
-    // imageBox.append(<p>Test</p>)
-    imageBox.insertAdjacentHTML("beforeend", `<p>${email}</p><img src="${image}" class="image">`)
->>>>>>> parent of a25bb87... Final Changes
 }
 
 function addImagetoBox(_image, _email) {
@@ -84,15 +79,12 @@ function addImagetoBox(_image, _email) {
     const imageBox = document.getElementById(email)
     imageBox.insertAdjacentHTML("beforeend", `<img src="${image}" class="image">`)
 
-<<<<<<< HEAD
     const smallImage = document.createElement('img')
     smallImage.src = image
     smallImage.alt = imageDescription
     smallImage.classList.add('image')
 
     imageBox.appendChild(smallImage)
-=======
->>>>>>> parent of a25bb87... Final Changes
 }
 
 function previewImage() {
@@ -104,7 +96,6 @@ function previewImage() {
         })
         .then(function(data) {
             imageURL = data.urls.regular
-<<<<<<< HEAD
             imageDescription = data.description
             // console.log(data.description)
             APIImage.src = imageURL
@@ -121,14 +112,6 @@ function previewImage() {
             APIImage.classList.remove('show')
             placeholderImage.classList.add('show')
             placeholderImage.classList.remove('hide')
-=======
-            document.getElementById('preview_image').src = imageURL
-            APIError.style.color='white' 
-        })
-        .catch(() => {
-            console.log("Fail")
-            APIError.style.color = 'red'
->>>>>>> parent of a25bb87... Final Changes
         })
 }
 

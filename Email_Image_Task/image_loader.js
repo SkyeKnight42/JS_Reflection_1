@@ -1,8 +1,4 @@
-
-const AccessKey = 'XAtVdRNagvmx4_-hzujS5jq9N3BXMNBWE1MoQPBhhA0'
-const PrivateKey = 'cY0OyVXeasSHJPZ_Dpv1kO70VdzEEHqIaFX5QmYXrjU'
-
-const imageContainer = document.getElementById('image_container')
+const userContainer = document.getElementById('email_image_container')
 
 const addItemButton = document.getElementById('add_button')
 const newImageButton = document.getElementById('new_button')
@@ -12,125 +8,162 @@ const APIError = document.getElementById('API_error')
 const placeholderImage = document.getElementById('placeholder')
 const APIImage = document.getElementById('preview_image')
 
-emailError.style.color = 'white'
-APIError.style.color = 'white'
+let emailErrorString = "Invalid Email"
+let apiErrorString = "API Error"
 
-let testedEmail
-let imageURL
-let imageDescription
-previewImage()
 
-addItemButton.addEventListener('click', () => {
-    validateEmail(inputField.value)
+let failCount = 0
+let passedEmail
+let uncutEmail
+let imageValues = []
+let usedEmails = []
 
+document.addEventListener('DOMContentLoaded', function() {
     previewImage()
 })
 
-newImageButton.addEventListener('click', () => {
-    previewImage();
+addItemButton.addEventListener('click', function() {
+    if (failCount == 0 ) {
+        validateEmail(inputField.value)
+    }
+
+})
+
+newImageButton.addEventListener('click', function() {
+    failCount = 0
+    previewImage()
 })
 
 function validateEmail(emailInput) {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (emailInput.match(mailformat)) { //Validate Email
 
-        emailError.style.color = 'white'
+        // Remove the @
+        passedEmail = emailInput.replace(/@/g, '')
+        uncutEmail = emailInput
+        emailError.textContent = ''
 
-        // If email is valid, store the variable for once an image has successfully been retrieved from the API
-        testedEmail = document.getElementById(emailInput) 
-
-        // searchPhotos(emailInput)
-        if (testedEmail) {
+        if (arrayContains(passedEmail)) {
             addImagetoBox(imageURL, emailInput)
         } else {
-            createImageBox(imageURL, emailInput)
+            createImageBox()
         }
 
     } else {
-        emailError.style.color = 'red'
+        emailError.textContent = emailErrorString
     }
 }
 
-function createImageBox(_image, _email, _alt) {
-    let image = _image
-    let email = _email
-    let alt = _alt
+function createImageBox() {
 
-    const imageBox = document.createElement('div')
-    imageBox.classList.add('image_box')
-    imageBox.id= email
-    imageContainer.appendChild(imageBox)
+    // Create the main container
+    let user_images = document.createElement('div')
+    user_images.classList.add('user_images')
+    user_images.id = passedEmail
+    userContainer.appendChild(user_images)
 
-    const emailText = document.createElement('p')
-    emailText.textContent = email
-    const smallImage = document.createElement('img')
-    smallImage.src = image
-    smallImage.alt = imageDescription
-    smallImage.classList.add('image')
+    // Add the email text
+    let email_text = document.createElement('p')
+    email_text.textContent = passedEmail
+    user_images.appendChild(email_text)
 
-    imageBox.appendChild(emailText)
-    imageBox.appendChild(smallImage)
+    // Create the image container
+    let image_container = document.createElement('div')
+    image_container.classList.add('image_container')
+    image_container.id = passedEmail + '_image_box'
+    user_images.appendChild(image_container)
+
+    // Create the image
+    let image = document.createElement('img')
+    image.src=imageValues[5]
+    image.classList.add('mini_image')
+    image.alt = "Photograph by: " + imageValues[1]
+    image_container.appendChild(image)
+    usedEmails.push(passedEmail)
+    previewImage()
 }
 
-function addImagetoBox(_image, _email) {
-    let image = _image
-    let email = _email
+function addImagetoBox() {
+    // Create the image
+    let image = document.createElement('img')
+    image.src=imageValues[5]
+    image.classList.add('mini_image')
+    let image_container = document.getElementById(passedEmail + '_image_box')
+    image_container.appendChild(image)
+    previewImage()
 
-    const imageBox = document.getElementById(email)
-    imageBox.insertAdjacentHTML("beforeend", `<img src="${image}" class="image">`)
-
-    const smallImage = document.createElement('img')
-    smallImage.src = image
-    smallImage.alt = imageDescription
-    smallImage.classList.add('image')
-
-    imageBox.appendChild(smallImage)
 }
 
 function previewImage() {
-    const url = "https://api.unsplash.com/photos/random/?client_id="+AccessKey
-    fetch(url)
-        .then(function (data) {
-            APIError.style.color='white'
-            return data.json()
-        })
-        .then(function(data) {
-            imageURL = data.urls.regular
-            imageDescription = data.description
-            // console.log(data.description)
-            APIImage.src = imageURL
-            APIImage.classList.add('show')
-            APIImage.classList.remove('hide')
-            placeholderImage.classList.add('hide')
-            placeholderImage.classList.remove('show')
-            APIImage.alt = imageDescription
-        })
-        .catch(function() {
-            // console.log("Fail")
-            APIError.textContent = "API Error"
-            APIImage.classList.add('hide')
-            APIImage.classList.remove('show')
-            placeholderImage.classList.add('show')
-            placeholderImage.classList.remove('hide')
-        })
+    inputField.textContent = ''
+    do {
+        id = Math.floor(Math.random()*100)
+        imageURL = 'https://picsum.photos/id/' + id + '/500/500'
+        var urlString = 'https://picsum.photos/id/' + id + '/info'
+
+        let xmlhttp = new XMLHttpRequest()
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+
+                let response = String(xmlhttp.responseText)
+                response = response.substring(1, response.length-2)
+                
+                let cutResponse = response
+
+                // Remove all "
+                cutResponse = cutResponse.replace(/"/g, '')
+
+                // add a comma to end the final data value
+                cutResponse += ','
+
+                for (let x = 0; x < 6; x++) {
+                    let value = ''
+                    let colonPosition = null
+                    let commaPosition = null
+                    for (let y = 0; y < cutResponse.length; y++) {
+
+                        // find first available : 
+                        if (cutResponse.charAt(y) == ':' && colonPosition == null) {
+                            colonPosition = y
+                        }
+                        // find first available , after the :
+                        if (cutResponse.charAt(y) == ',' && colonPosition != null) {
+                            commaPosition = y
+                        }
+                        if (colonPosition != null && commaPosition != null) {
+                            break;
+                        }
+                    }
+
+                    value = cutResponse.substring(colonPosition+1, commaPosition)
+                    cutResponse = cutResponse.slice(commaPosition+1, cutResponse.length)
+                    imageValues[x] = value
+                }
+
+                APIImage.alt = "Photograph by " + imageValues[1]
+                APIImage.src=imageValues[5]
+                APIError.textContent = ''
+                failCount = 0;
+
+            } else {
+                APIError.textContent = apiErrorString
+                APIImage.src = 'error_image.jpg'
+                APIImage.alt = "API Failed"
+                failCount++;
+            }
+        }
+
+        xmlhttp.open("GET", urlString, true);
+        xmlhttp.send();
+    } while (failCount < 5)
 }
 
-
-
-// function searchPhotos(_email) {
-//     const url = "https://api.unsplash.com/photos/random/?client_id="+AccessKey
-//     const email = _email
-//     fetch(url)
-//         .then(function (data) {
-//             return data.json()
-//         })
-//         .then(function(data) {
-//             console.log(data)
-
-//             if (testedEmail) {
-//                 addImagetoBox(data.urls.regular, email)
-//             } else {
-//                 createImageBox(data.urls.regular, email)
-//             }
-//         })
-// }
+function arrayContains(value) {
+    for (let x = 0; x < usedEmails.length; x++) {
+        if (usedEmails[x] === value) {
+            return true
+        }
+    }
+    return false
+}
